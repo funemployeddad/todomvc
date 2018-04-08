@@ -12,7 +12,7 @@ Step 2 - Allow people to CRUD Lists
     - create a list
     - show a list
 
-      -need a model and controller, so generate resource
+    - need a model and controller, so generate resource
 
 Step 3: Add items to a list
 
@@ -26,10 +26,29 @@ Step 3: Add items to a list
 
 Step 4: Adding Validations
   Validates that lists have name
-  Validates taht items have a description
+  Validates that items have a description
 
 Step 5: add state (complete/incomplete) to items in a list
   -marking items as complete or incomplete
+
+  What urls do I need and how might my database change?
+
+  -the idea of an item being complete or incomplete require data
+
+  -new forms for updating the status of an item - which means new URLs
+
+  /lists/1/items
+  PUT/PATCH/lists/1/items/1
+  PUT/PATCH/lists/:list_id/items/:id
+need to take the checkbox HTML from todomvc:   <input class="toggle" type="checkbox">
+also need the JS function to submit the form when you click the checkbox
+$(function(){
+  $("input.toggle").on("change", function(){
+    $(this).parents("form").trigger("submit")
+    })
+  });
+
+<li data-id="1523161405996" class="completed"><div class="view"><input class="toggle" type="checkbox"><label>new list</label><button class="destroy"></button></div></li>
 
 Step 6: Deleting items from a list
 

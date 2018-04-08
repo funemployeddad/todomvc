@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @item = @list.items.build
+    @item = Item.new
   end
 
   def create
