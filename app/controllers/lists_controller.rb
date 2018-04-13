@@ -1,8 +1,10 @@
 class ListsController < ApplicationController
+  before_action :authentication_required
 
   def index
-    @list = List.new
-    @lists = List.all
+      @list = List.new
+      @lists = List.all
+
     # render 'lists/index.html.erb'
   end
 

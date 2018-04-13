@@ -22,3 +22,20 @@ Does it impact my URLS? '/lists/1' #
 # Step 3: Add Items to a List
 
 # Step Whatever: Fix Down Arrow on Make a List Form
+
+# Authentication
+Database and URLs
+Do I need to update my database?
+ - new model, user, email (do it with just this one trait first, then you can go back and add in the authorization piece with a password)
+
+What URLs will the user use to interact with my site
+
+  get /users/new Users#new
+    - form
+  post /users  Users#create
+    - create the user in the db
+
+  get /login
+    -form
+  post /sessions
+    - "log the user in" -- whatever that means
