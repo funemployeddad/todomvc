@@ -24,5 +24,6 @@
 </section>
 
 <footer class="info">
-  <%= link_to "Logout", logout_path %>
+  <p>You're logged in as: <%= current_user.email %></p>
+  <%= link_to "Logout", logout_path %></p>
 </footer>
